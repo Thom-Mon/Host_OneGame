@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/justOne.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles\styleJS.css">
+    <title>JUST ONE</title>
+</head>
+
+<body onload="onFirstLoad()" id="body">
+    <div class="flex-container" id="flexcontainer">
+
+    </div>
+    <div class="flex-container-navBox">
+        <button id="back" class="navBox" type="button" onclick="showPreviousCard();return false;">ZURÜCK</button>
+        <button class="navBox" type="button" onclick="onFirstLoad();return false;">Start</button>
+        <button id="next" class="navBox" type="button" onclick="showNextCard();return false;">NÄCHSTE</button>
+    </div>
+    <div class="flex-container-counter">
+        <h3 id="counter">Karte: 0/13</h3>
+        <button id="correctGuessed" onclick="counterCorrectAnswers();return false;">Hurra!</button>
+        <button id="deletePoint" onclick="deleteCorrectAnswers();return false;">X</button>
+    </div>
+    <div class="placeholder">
+        <div id="companyName">(R) THG Illusions 2020</div>
+    </div>
+
+
+</body>
+
+
+</html>

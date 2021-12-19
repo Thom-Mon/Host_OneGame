@@ -1,0 +1,109 @@
+body {
+    font-family: calibri, 'sans-serif';
+    font-weight: 200;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
+    background: #fefcea;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fefcea 0%, #f1da36 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fefcea 0%, #f1da36 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36', GradientType=0);
+    /* IE6-9 */
+    /* IE6-9 */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3b679e+0,2b88d9+26,207cca+75,7db9e8+100 */
+    background: #3b679e;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #3b679e 0%, #2b88d9 26%, #207cca 75%, #7db9e8 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3b679e 0%, #2b88d9 26%, #207cca 75%, #7db9e8 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3b679e 0%, #2b88d9 26%, #207cca 75%, #7db9e8 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8', GradientType=0);
+    /* IE6-9 */
+    font-size: 30px;
+    border-color: rgb(46, 38, 28);
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    flex-direction: row;
+    text-align: center;
+}
+
+.flex-container>div {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 15px;
+    box-shadow: 3px 3px 1px rgb(41, 88, 216);
+}
+
+.left-side-content {
+    flex: 50%;
+}
+
+.right-side-content {
+    flex: 50%;
+}
+
+.currentCard-container {
+    background-color: rgb(219, 213, 157);
+    text-align: center;
+    /*width: 50%;*/
+    border-style: dashed;
+    border-radius: 3px;
+    border-width: 1px;
+    /*flex-direction: column;*/
+}
+
+.currentCard-container .content {
+    text-align: center;
+    align-items: center;
+}
+
+.evaluateResult {
+    text-align: center;
+}
+
+input[type=button] {
+    background-color: crimson;
+    width: auto;
+    height: 40px;
+    margin-right: 50px;
+}
+
+input[type=reset] {
+    background-color: rgb(20, 220, 63);
+    width: auto;
+    height: 40px;
+}
+
+.backForthButtons {
+    position: relative;
+}
+
+.backForthButtons #forth {
+    -ms-transform: translateX(+50%);
+    transform: translateX(+50%);
+    font-size: large;
+    background-color: rgb(192, 192, 202);
+    margin: 10px;
+}
+
+@media (max-width: 400px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
