@@ -78,7 +78,7 @@ body {
 
 .flex-container-navBox>button {
     font-size: large;
-    background-color: rgb(231, 238, 172);
+    background-color: rgba(231, 238, 172);
     height: 60px;
     border-radius: 10px;
     border-style: solid;
@@ -135,4 +135,12 @@ body {
 
 .placeholder {
     text-align: end;
+}
+
+#back{
+    background-color: #f1da36;
+}
+
+#reset{
+    color: rgb(46, 38, 28,0.4);
 }

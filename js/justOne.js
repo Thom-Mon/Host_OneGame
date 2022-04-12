@@ -1358,6 +1358,7 @@ var greeting = ["Willkommen", "in der", "SG", "Just-One", "Webanwendung"]
 var cardAmount = 5;
 var currentCard = 0;
 var firstLoad = false;
+var isGameRunning = false;
 var correctAnswers = 0;
 
 function shuffleWordList() {
@@ -1386,7 +1387,10 @@ function onFirstLoad() {
         addOnClickFeature()
         firstLoad = true;
     } else {
-        location.reload();
+        if(confirm("Achtung! \nSoll das aktuelle Spiel wirklich zurückgesetzt werden?"))
+        {
+            location.reload();
+        }
     }
 }
 
@@ -1406,6 +1410,17 @@ function Startfunktion() {
 
 
 function showNextCard() {
+    // on Startup make everything visible and change innerhtml.
+    if(!isGameRunning)
+    {
+        document.getElementById("back").style.display = "block";
+        document.getElementById("reset").style.display = "block";
+        var startButton = document.getElementById("next");
+        startButton.innerHTML = "WEITER";
+        startButton.style.backgroundColor = "#f1da36";
+
+        isGameRunning = true;
+    }
 
     if (currentCard < 13) {
         currentCard++;

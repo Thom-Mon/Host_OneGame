@@ -14,14 +14,14 @@
 
     </div>
     <div class="flex-container-navBox">
-        <button id="back" class="navBox" type="button" onclick="showPreviousCard();return false;">ZURÜCK</button>
-        <button class="navBox" type="button" onclick="onFirstLoad();return false;">Start</button>
-        <button id="next" class="navBox" type="button" onclick="showNextCard();return false;">NÄCHSTE</button>
+        <button id="back" style="display: none;" class="navBox" type="button" onclick="showPreviousCard();return false;">ZURÜCK</button>
+        <button id="reset" class="navBox" style="display: none;" type="button" onclick="onFirstLoad();return false;">NEUSTART</button>
+        <button id="next" class="navBox" type="button" onclick="showNextCard();return false;">START</button>
     </div>
     <div class="flex-container-counter">
         <h3 id="counter">Karte: 0/13</h3>
-        <button id="correctGuessed" onclick="counterCorrectAnswers();return false;">Hurra!</button>
-        <button id="deletePoint" onclick="deleteCorrectAnswers();return false;">X</button>
+        <button id="correctGuessed" onclick="counterCorrectAnswers();return false;">korrekte Antwort + 1 </button>
+        <button id="deletePoint" onclick="deleteCorrectAnswers();return false;">- 1 </button>
     </div>
     <div class="placeholder">
         <div id="companyName">(R) THG Illusions 2020</div>
