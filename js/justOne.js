@@ -1370,12 +1370,6 @@ function shuffleWordList() {
         allWords[i] = allWords[j]
         allWords[j] = k
     }
-
-
-
-
-
-
 }
 
 
@@ -1489,10 +1483,19 @@ function addOnClickFeature() {
 }
 
 function markClicked(id) {
-    unmarkClicked();
     var selected = document.getElementById(id);
-    selected.style.backgroundColor = "Darkred";
-    selected.style.color = "white";
+
+    if(selected.style.backgroundColor == "darkred")
+    {
+        selected.style.backgroundColor = "white";
+        selected.style.color = "black";
+    }
+    else
+    {
+        unmarkClicked();
+        selected.style.backgroundColor = "Darkred";
+        selected.style.color = "white";
+    }
 }
 
 function unmarkClicked() {
@@ -1551,13 +1554,13 @@ function generateResultScreen() {
 
     var evaluateText = "";
     if (correctAnswers <= 4) {
-        evaluateText = "Trixie ist zu recht sauer! Das war ja mal garnichts!";
+        evaluateText = "Das war ja mal garnichts!";
     } else if (4 < correctAnswers && correctAnswers <= 8) {
-        evaluateText = "Ein gutes Ergebnis, genau im Mittelfeld!";
+        evaluateText = "Ein fast gutes Ergebnis, genau im Mittelfeld!";
     } else if (8 < correctAnswers && correctAnswers <= 10) {
         evaluateText = "Obere Mittelklasse, nicht schlecht!";
     } else if (10 < correctAnswers && correctAnswers <= 12) {
-        evaluateText = "Wahnsinn, das ist extrem gut! Trixie beißt vor Aufregung ins Sofa!";
+        evaluateText = "Wahnsinn, das ist ein extrem gutes Ergebnis!";
     } else if (correctAnswers == 13) {
         evaluateText = "Unglaublich, alles richtig! Herzlichen Glückwunsch!";
     }
@@ -1565,7 +1568,6 @@ function generateResultScreen() {
     var allResultsText = ["Endergebnis", correctAnswers + " von 13", evaluateText, "-", "-"];
 
     for (y = 0; y < cardAmount; y++) {
-
         var Words = document.getElementById(y);
         Words.style.fontSize = "25px";
         //Words.parentNode.removeChild(Words); Entfernt Knoten
